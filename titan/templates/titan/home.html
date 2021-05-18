@@ -1,0 +1,18 @@
+{% extends "titan/base.html" %}
+{% block content %}
+   <h1 style="font-family: Vollkorn SC; font-size: 80px; text-align:center;" class="font-effect-fire"><strong>Shiganshina District Shop</strong></h1>
+   <ul>
+    <li><a class="active" href="http://127.0.0.1:8000/">HOME</a></li>
+    <li><a href="http://127.0.0.1:8000/shopping/">SHOP HERE</a></li>
+    <li style="float:right"><a href="http://127.0.0.1:8000/register/">REGISTER</a></li>
+    <li style="float:right">
+      {% if user.is_authenticated %} 
+          <a href="{% url 'logout' %}">LOGOUT</a>
+      {% else %}
+          <a href="{% url 'login' %}">LOGIN</a>
+      {% endif %}</li>
+  </ul>
+   <p class="b" style="color:rgb(248, 248, 51)"><strong>Welcome, young warriors of freedom!<br>You managed to stumble upon the forbidden paradise of merchandise in the Shiganshina District of Wall Rose.<br>
+      What you seek is what you will find. Gear? Costumes? Titan Fluid? Drop your coins here and get equipped for the attack on the titans.</strong><br></p>  
+      <a href="http://127.0.0.1:8000/shopping" target="_blank" style="font-family: Vollkorn SC;">SHOP NOW!</a>
+{% endblock %}

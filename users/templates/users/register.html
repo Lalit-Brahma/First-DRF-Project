@@ -1,0 +1,21 @@
+{% extends "titan/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class='content-section'>
+       <form method='POST'>
+           {% csrf_token %}
+           <fieldset class="form-group" style="background-color: rgb(229, 255, 0);">
+                <legend class="border-bottom mb-4" style="font-family: Vollkorn SC; color:rgb(255, 244, 148); background-color:red; font-size: 30px;"><strong>Join Today</strong></legend>
+                {{ form|crispy }}
+           </fieldset>
+           <div class="form-group">
+               <button class="btn btn-outline-info" type="Submit" style="font-family: Vollkorn SC; color:rgb(10, 10, 9);">Sign Up</button>
+           </div>
+       </form>
+       <div class="border-top pt-3">
+            <small class="text-muted" style="font-family: Vollkorn SC; color:rgb(255, 243, 80); font-size: 25px;">
+                Already have an Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+            </small>    
+       </div>
+    </div>
+{% endblock %}

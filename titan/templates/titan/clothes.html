@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AOT Merch</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vollkorn SC&effect=fire|Oswald">
+<style>
+  a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: rgb(0, 255, 34);
+}
+ #rcorners1 {
+  border-radius: 25px;
+  background: #fcee2e;
+  padding: 20px; 
+  width: 1000px;
+  height: 250px; 
+ }
+ img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+ul.c {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(243, 0, 0);
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}            
+
+    h1.a{ font-family: "Vollkorn SC", sans-serif;
+          font-size: 70px; }
+    p.b{ font-family: "Vollkorn SC", sans-serif;
+         font-size: 40px;
+         text-shadow: 4px 4px rgb(0, 0, 0);}
+    body {  background-image: url("https://cdn.wallpapersafari.com/64/11/IrnlpU.png"); }          
+</style>
+</head>
+<body>
+  <h1 class='font-effect-fire' style="font-family: Vollkorn SC; font-size: 60px;">CLOTHES</h1>
+  {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" style="font-family: Vollkorn SC; font-size: 30px; color:rgb(233, 255, 38);">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+<ul class='c'>
+  <li><a href="http://127.0.0.1:8000/weapons">WEAPONS</a></li>
+  <li><a href="http://127.0.0.1:8000/clothes">CLOTHES</a></li>
+  <li><a href="http://127.0.0.1:8000/food">FOOD</a></li>
+  <li><a href="http://127.0.0.1:8000/shopping/">BACK TO SHOP</a></li>
+</ul>
+<br>
+{% for ct in clts %}
+<div id="rcorners1">
+      <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">{{ ct.title }}</h1>
+      <p style="font-family: Georgia, 'Times New Roman', Times, serif;">{{ ct.description }}<img align='right' src="{{ ct.image.url }}"></p>
+      <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Price = {{ ct.price }} coins
+        <a href="http://127.0.0.1:8000/transaction" style="font-family: Vollkorn SC; font-size: 20px; color:rgb(233, 255, 38); background-color: red;">BUY NOW</a></p>
+</div>
+<br>
+{% endfor %}
+</body>
+</html>

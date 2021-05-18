@@ -1,0 +1,10 @@
+{% extends "titan/base.html" %}
+{% block content %}
+       <h2 style="font-family: Vollkorn SC; font-size: 30px; color: rgb(255, 243, 80);">You have been logged out</h2>
+       <div class="border-top pt-3">
+            <small class="text-muted" style="font-family: Vollkorn SC; color:rgb(255, 243, 80);">
+                <a class="ml-2" href="{% url 'login' %}" style="font-family: Vollkorn SC; font-size: 30px;">Log In Again </a>
+                <a class="ml-2" href="http://127.0.0.1:8000/" style="font-family: Vollkorn SC; font-size: 30px;">Go To Home</a>
+            </small>    
+       </div>
+{% endblock %}
