@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vollkorn SC&effect=fire|Oswald">
 <style>
   a:link, a:visited {
-  background-color: #f44336;
+  background-color: #f51c0c;
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -13,49 +13,12 @@
   display: inline-block;
 }
 
-a:hover, a:active {
-  background-color: rgb(0, 255, 34);
-}
-ul.c {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f32222;
-  font-family: "Vollkorn SC";
-}
-
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-li {
-  text-align: center;
-  border-bottom: 1px solid #555;
-}
-
-li:last-child {
-  border-bottom: none;
-}
-
-li a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-ul.d {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(243, 0, 0);
+  background-color: rgb(253, 8, 8);
 }
 
 li {
@@ -64,7 +27,7 @@ li {
 }
 
 li:last-child {
-  border-right: none;
+  border-right: 1px solid #bbb;
 }
 
 li a {
@@ -76,7 +39,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: rgb(99, 248, 12);
 }
 
 .active {
@@ -102,7 +65,7 @@ li a:hover:not(.active) {
     {% if user.is_authenticated %} 
         <p style="font-family: Vollkorn SC; color:yellow; font-size: 20px;">Logged in as {{ user.username }}</p>
    {% endif %}    
-   <ul class='d'>
+   <ul>
     <li><a  href="http://127.0.0.1:8000/">HOME</a></li>
     <li><a href="http://127.0.0.1:8000/shopping/">SHOP HERE</a></li>
     <li style="float:right"><a href="http://127.0.0.1:8000/register/">REGISTER</a></li>
@@ -114,11 +77,13 @@ li a:hover:not(.active) {
       {% endif %}</li>
   </ul>
   <p><br></p>
-    <ul class='c'>
-      <li><a href="http://127.0.0.1:8000/weapons">Weapons</a></li>
-      <li><a href="http://127.0.0.1:8000/clothes">Clothes</a></li>
-      <li><a href="http://127.0.0.1:8000/food">Food</a></li>
+  <div align='center'>
+    <ul>
+      <li><a href="http://127.0.0.1:8000/weapons">WEAPONS</a></li>
+      <li><a href="http://127.0.0.1:8000/clothes">CLOTHES</a></li>
+      <li><a href="http://127.0.0.1:8000/food">FOOD</a></li>
     </ul>
+  </div>  
   
 </body>
 </html>
