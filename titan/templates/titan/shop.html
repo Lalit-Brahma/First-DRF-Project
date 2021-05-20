@@ -99,6 +99,9 @@ li a:hover:not(.active) {
   {% endfor %}
   {% endif %}  
     <h1 style="font-family: Vollkorn SC; font-size: 80px; text-align:center;" class="font-effect-fire"><strong>Shiganshina District Shop</strong></h1>
+    {% if user.is_authenticated %} 
+        <p style="font-family: Vollkorn SC; color:yellow; font-size: 20px;">Logged in as {{ user.username }}</p>
+   {% endif %}    
    <ul class='d'>
     <li><a  href="http://127.0.0.1:8000/">HOME</a></li>
     <li><a href="http://127.0.0.1:8000/shopping/">SHOP HERE</a></li>

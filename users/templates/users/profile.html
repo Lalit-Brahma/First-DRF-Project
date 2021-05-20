@@ -1,0 +1,13 @@
+{% extends "titan/base.html" %}
+{% block content %}
+   <h1 style="font-family: Vollkorn SC; font-size: 80px; text-align:center;" class="font-effect-fire"><strong>Shiganshina District Shop</strong></h1>
+   <ul>
+    <li><a class="active" href="http://127.0.0.1:8000/">HOME</a></li>
+    <li><a href="http://127.0.0.1:8000/shopping/">SHOP HERE</a></li>
+  </ul>
+<br>
+<h1 style="font-family: Vollkorn SC; color:yellow">PROFILE</h1>
+<p style="font-family: Vollkorn SC; color:yellow; font-size: 20px;">Username : {{ user.username }}</p>
+<p style="font-family: Vollkorn SC; color:yellow; font-size: 20px;">Email ID : {{ user.email }}</p>
+   
+{% endblock %}
